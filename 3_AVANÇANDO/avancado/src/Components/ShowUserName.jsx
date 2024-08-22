@@ -1,7 +1,7 @@
-const ShowUserName = (props) => {
+const ShowUserName = ({ name }) => {
   return (
     <div>
-      <h2>O nome do usuário: {props.name} </h2>
+      <h2>O nome do usuário: {name} </h2>
     </div>
   );
 };

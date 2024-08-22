@@ -3,6 +3,7 @@ import ManageData from "./Components/ManageData";
 import ListRender from "./Components/ListRender";
 import ConditionalRender from "./Components/ConditionalRender";
 import ShowUserName from "./Components/ShowUserName";
+import CarDatail from "./Components/CarDatail";
 
 ///Style /Css
 import "./App.css";
@@ -16,7 +17,11 @@ const App = () => {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
       <ShowUserName name="Pedro" />
+
+      {/* destructuring */}
+      <CarDatail brand="VM" km={1000} color="Vermelho" />
 
       {/* Imagem em 'public' */}
       <div>
