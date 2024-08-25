@@ -1,4 +1,5 @@
 //Components
+import { useState } from "react";
 import ManageData from "./Components/ManageData";
 import ListRender from "./Components/ListRender";
 import ConditionalRender from "./Components/ConditionalRender";
@@ -7,12 +8,27 @@ import CarDatail from "./Components/CarDatail";
 import Fragment from "./Components/Fragment";
 import Container from "./Components/Container";
 import ExecuteFuction from "./Components/ExecuteFuction";
+import Message from "./Components/Message";
+import ChangeMessageState from "./Components/ChangeMessageState";
 
 ///Style /Css
 import "./App.css";
 import City from "./assets/city.jpg";
+import UserDatail from "./Components/UserDatail";
 
 const App = () => {
+  const userDatail = [
+    { id: 1, name: "Pedro", job: "Programador", age: 18 },
+    { id: 2, name: "Elias", job: "Professor", age: 47 },
+    { id: 3, name: "Gustavo", job: "Nenhuma", age: 17 },
+  ];
+
+  const [message, setMessage] = useState();
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
+
   function showMessage() {
     console.log("Evento do componente pai");
   }
@@ -61,6 +77,21 @@ const App = () => {
 
       {/* Executar Função */}
       <ExecuteFuction myFunction={showMessage} />
+
+      {/* State Lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
+
+      {/* Atividade */}
+
+      {userDatail.map((datail) => (
+        <UserDatail
+          key={datail.id}
+          name={datail.name}
+          age={datail.age}
+          job={datail.job}
+        />
+      ))}
 
       {/* Imagem em 'public' */}
       <div>
