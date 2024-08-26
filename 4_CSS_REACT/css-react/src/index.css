@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 500px;
+}
+
+.red-title {
+  color: red;
+  background-color: #000;
+  padding: 25px;
+  border: 2px solid red;
+}
+
+/* .title {
+  color: green;
+  background-color: #000;
+  padding: 25px;
+  border: 2px solid green;
+} */

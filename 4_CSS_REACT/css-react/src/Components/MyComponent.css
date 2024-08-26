@@ -1,0 +1,6 @@
+.my-component-paragraph {
+    color: gray;
+    background-color: aquamarine;
+}
+
+/* colocar classes para o css de componenete não vazar para o css global!!! */
