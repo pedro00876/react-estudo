@@ -58,7 +58,6 @@ function App() {
     // fill state
     setPickedWord(word);
     setPickedCategory(category);
-
     setLetters(letters);
 
     setGameStage(stages[1].name);
