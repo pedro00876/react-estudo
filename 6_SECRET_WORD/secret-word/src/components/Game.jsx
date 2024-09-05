@@ -53,7 +53,7 @@ const Game = ({
             name="letter"
             maxLength="1"
             required
-            onVolumeChange={(e) => setLetter(e.target.value)}
+            onChange={(e) => setLetter(e.target.value)}
             value={letter}
             ref={letterInputRef}
           />
