@@ -18,6 +18,8 @@ const stages = [
   { id: 3, name: "end" },
 ];
 
+const guessesQty = 3;
+
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name);
   const [words] = useState(wordsList);
@@ -28,7 +30,7 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [guesses, setGusses] = useState(3);
+  const [guesses, setGusses] = useState(guessesQty);
   const [score, setScore] = useState(0);
 
   const pickWordAndPickCategory = useCallback(() => {
@@ -88,13 +90,28 @@ function App() {
         ...actualWrongLetters,
         normalizedLetter,
       ]);
+      setGusses((actualGuesses) => actualGuesses - 1);
     }
   };
-  console.log(guessedLetters);
-  console.log(wrongLetters);
 
+  const clearLetterStates = () => {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  };
+
+  useEffect(() => {
+    if (guesses <= 0) {
+      // reset all state
+      clearLetterStates();
+
+      setGameStage(stages[2].name);
+    }
+  }, [guesses]);
   // Restart the game
-  const retry = () => [setGameStage(stages[0].name)];
+  const retry = () => {
+    setScore(0);
+    setGusses(guessesQty)[setGameStage(stages[0].name)];
+  };
 
   return (
     <div className="App">
