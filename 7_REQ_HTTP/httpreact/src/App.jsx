@@ -36,6 +36,14 @@ function App() {
       },
       body: JSON.stringify(product),
     });
+
+    // 3- Cerregamento dinâmico
+    const addedProduct = await res.json();
+
+    setProducts((previusProducts) => [...previusProducts, addedProduct]);
+
+    setName("");
+    setPrice("");
   };
 
   return (
