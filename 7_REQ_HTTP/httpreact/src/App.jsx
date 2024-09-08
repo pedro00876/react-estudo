@@ -77,7 +77,7 @@ function App() {
       </ul>
 
       <div className="add-product">
-        <p>Adicionar produto:</p>
+        <p>Adicionar produto: </p>
         <form onSubmit={handleSubmit}>
           <label>
             Nome:
