@@ -98,7 +98,7 @@ function App() {
             />
           </label>
           {/* 7 - state de loading no post */}
-          {loading ? <p>Aguarde!</p> : <input type="submit" value="Criar" />}
+          {loading ? <p>Aguarde! </p> : <input type="submit" value="Criar" />}
         </form>
       </div>
     </div>
