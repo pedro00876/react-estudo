@@ -19,12 +19,15 @@ function App() {
   const [price, setPrice] = useState("");
 
   // 1 - resgatando dados
-  // useEffect(async () => {
-  //   const res = await fetch("http://localhost:3000/products");
+  // useEffect(() => {
+  //   asyn function fetchData() {
+  //     const res = await fetch("url");
 
-  //   const data = await res.json();
+  //     const data = await res.json();
 
-  //   setProducts(data);
+  //     setProducts(data);
+  //   }
+  //fetchData();
   // }, []);
 
   // 2 - add product
@@ -54,11 +57,6 @@ function App() {
 
     setName("");
     setPrice("");
-  };
-
-  /* 9 - desafio */
-  const handleRemove = (id) => {
-    httpConfig(id, "DELETE");
   };
 
   return (
