@@ -92,7 +92,7 @@ export const useFetch = (url) => {
     };
 
     httpRequest();
-  }, [config]);
+  }, [config, method, url]);
 
   console.log(config);
 
