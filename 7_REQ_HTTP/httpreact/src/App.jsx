@@ -30,6 +30,7 @@ function App() {
   //fetchData();
   // }, []);
 
+  //
   // 2 - add product
   const handleSubmit = async (e) => {
     e.preventDefault();
