@@ -22,7 +22,7 @@ function App() {
   // useEffect(() => {
   //   asyn function fetchData() {
   //     const res = await fetch("url");
-
+// aaa
   //     const data = await res.json();
 
   //     setProducts(data);
