@@ -22,7 +22,6 @@ function App() {
   // useEffect(() => {
   //   asyn function fetchData() {
   //     const res = await fetch("url");
-// aaa
   //     const data = await res.json();
 
   //     setProducts(data);
@@ -85,6 +84,7 @@ function App() {
               value={name}
               name="name"
               onChange={(e) => setName(e.target.value)}
+              style={{color: "#000"}}
             />
           </label>
           <label>
@@ -94,6 +94,7 @@ function App() {
               value={price}
               name="price"
               onChange={(e) => setPrice(e.target.value)}
+              style={{color: "#000"}}
             />
           </label>
           {/* 7 - state de loading no post */}
