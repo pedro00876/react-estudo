@@ -7,9 +7,11 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from "./pages/home"
 import About from "./pages/About"
 import Product from "./pages/Product"
+import Info from "./pages/Info"
 
 //import components
 import Navbar from "./components/Navbar"
+
 
 
 
@@ -25,6 +27,9 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* 4 - Rota dinâmica */}
           <Route path="/products/:id" element={<Product />}/>
+
+          {/* 6 -nested routes  */}
+          <Route path="/products/:id/info" element={<Info />} />
          </Routes>
       </BrowserRouter>
     </div>
