@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CounterContext } from "../context/CounterContext"
 
-x
+// precisa ajustar alguma coisa
 const Home = () => {
 
   const {counter} = useContext(CounterContext)
@@ -13,5 +13,5 @@ const Home = () => {
     </div>
   )
 }
-
+// precisa ajustar alguma coisa
 export default Home
