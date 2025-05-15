@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CounterContext } from "../context/CounterContext"
 
-
+x
 const Home = () => {
 
   const {counter} = useContext(CounterContext)
