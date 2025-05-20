@@ -2,16 +2,26 @@ import { createContext, useReducer } from "react";
 
 export const TitleColorContext = createContext()
 export const TitleColorReducer = (state, action) => {
-  //switch
+  //6 - alterando contetxo mais complexo
+
+  switch(action.type){
+    case "RED":
+      return {...state, color: "red"}
+    case "BLUE":
+      return {...state, color: "blue"}
+    default:
+      return state
+  }
+
 }
 
 export const TitleColorContextProvider = (({children}) => {
-  const [state, disPatch] = useReducer(TitleColorReducer, {color: "purple"})
+  const [state, dispatch] = useReducer(TitleColorReducer, {color: "purple"})
 
   console.log("Title color context: ", state)
 
   return (
-    <TitleColorContext.Provider value={{...state}}>
+    <TitleColorContext.Provider value={{...state, dispatch}}>
       {children}
     </TitleColorContext.Provider>
   )
