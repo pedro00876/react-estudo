@@ -3,17 +3,21 @@
 import ChangeCounter from "../components/ChangeCounter"
 
 // 4 - refatorando com hook
-
 import { useCounterContext } from "../hooks/useCounterContext"
 
-const Home = () => {
+// 5 - context mais complexo
+import { useTitleColorContext } from "../hooks/useTitleColorCountext";
 
+const Home = () => {
  // const {counter} = useContext(CounterContext)
  const {counter} = useCounterContext();
 
+ // 5 - context mais complexo
+ const {color} = useTitleColorContext();
+
   return (
     <div>
-      <h1>Home</h1>
+      <h1 style={{color: color}}>Home</h1>
       <p>Valor do contador: {counter}</p>
       {/* 3- Alterando contexto */}
       <ChangeCounter />
