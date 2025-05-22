@@ -10,10 +10,9 @@ export const TitleColorReducer = (state, action) => {
     case "BLUE":
       return {...state, color: "blue"}
     default:
-      return state
+      return state;
   }
-
-}
+};
 
 export const TitleColorContextProvider = (({children}) => {
   const [state, dispatch] = useReducer(TitleColorReducer, {color: "purple"})
