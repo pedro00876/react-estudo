@@ -1,3 +1,7 @@
+:root {
+  font-family: sans-serif;
+}
+
 .container {
   min-height: 60vh;
   margin-bottom: 5em;
