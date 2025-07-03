@@ -11,12 +11,12 @@ const Navbar = () => {
       </NavLink>
       <ul className={styles.links_list}>
         <li>
-          <NavLink to='/' className={({isactive}) => (isactive ? styles.active : '') }>
+          <NavLink to='/' className={({isActive}) => (isActive ? styles.active : '') }>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to='/About' className={({isactive}) => (isactive ? styles.active : '') }>
+          <NavLink to='/About' className={({isActive}) => (isActive ? styles.active : '') }>
             Sobre
           </NavLink>
         </li>
