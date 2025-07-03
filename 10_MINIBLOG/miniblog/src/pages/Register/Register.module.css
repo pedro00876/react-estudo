@@ -1,0 +1,8 @@
+.register {
+  display: flex;
+  text-align: center;
+
+  p {
+    color: #aaa;
+  }
+}
