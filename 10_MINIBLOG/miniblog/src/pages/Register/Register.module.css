@@ -1,8 +1,10 @@
 .register {
-  display: flex;
   text-align: center;
+  margin-top: 3em;
 
   p {
     color: #aaa;
+    padding: 0.5em;
+    margin-bottom: 2em;
   }
 }

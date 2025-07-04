@@ -42,7 +42,7 @@ form {
 label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1px;
+  margin-bottom: 1em;
 
   span {
     margin-bottom: .3em;
@@ -70,6 +70,7 @@ textarea{
   border: none;
   padding: 10px 15px;
   font-size: 1em;
+  margin-bottom: 1em;
 
   .btn-dark {
     background-color: #000;
