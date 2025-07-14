@@ -15,10 +15,14 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Dashboard from './pages/Dashboard/Dashboard'
+import CreatePost from './pages/CreatePost/CreatePost'
 
 // Components
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+
+
 
 
 
@@ -33,7 +37,7 @@ function App() {
 
     onAuthStateChanged(auth, (user) => {
       setUser(user)
-    } )
+    })
 
   }, [auth])
 
@@ -43,7 +47,7 @@ function App() {
 
   return (
     <div className='App'>
-      <AuthProvider>
+      <AuthProvider value={{user} }>
         <BrowserRouter>
         <Navbar />
       
@@ -53,6 +57,8 @@ function App() {
             <Route path='/About' element={<About />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/Register' element={<Register />} />
+            <Route path='/Dashboard' element={<Dashboard />} />
+            <Route path='/posts/create' element={<CreatePost />} />
           </Routes>
         </div>
         
