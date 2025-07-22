@@ -1,8 +1,8 @@
 import { useState, useEffect, useReducer } from "react";
-import {db} from 'firebase/firestore'
+import {db} from '../firebase/config'
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
-const initiaState = {
+const initialState = {
   loading: null,
   error: null
 }
@@ -23,19 +23,19 @@ const insertReducer = (state, action) => {
 
 export const useInsertDocument = (docCollection) => {
 
-  const [response, dispatch] = useReducer(insertReducer, initiaState)
+  const [response, dispatch] = useReducer(insertReducer, initialState)
 
   // deal with memory leak
   const [cancelled, setCancelled] = useState(false)
 
-  const checkCncelBeforeDispatch = (action) => {
+  const checkCancelBeforeDispatch = (action) => {
     if(!cancelled) {
       dispatch(action)
     }
   }
 
   const insertDocument = async(document) => {
-    checkCncelBeforeDispatch({
+    checkCancelBeforeDispatch({
         type: "LOADING",
       })
 
@@ -49,13 +49,13 @@ export const useInsertDocument = (docCollection) => {
         newDocument
       )
 
-      checkCncelBeforeDispatch({
+      checkCancelBeforeDispatch({
         type: "INSERTED_DOC",
         payload: insertedDocument
       })
 
     } catch (error) {
-      checkCncelBeforeDispatch({
+      checkCancelBeforeDispatch({
         type: "ERROR",
         payload: error.message,
       })
