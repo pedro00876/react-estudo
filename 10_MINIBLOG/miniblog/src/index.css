@@ -71,11 +71,11 @@ textarea{
   padding: 10px 15px;
   font-size: 1em;
   margin-bottom: 1em;
+  }
 
   .btn-dark {
     background-color: #000;
     border-radius: 0;
-  }
 
   .btn-outline {
     background-color: transparent;
