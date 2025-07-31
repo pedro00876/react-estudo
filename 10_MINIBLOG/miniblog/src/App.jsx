@@ -17,6 +17,7 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard/Dashboard'
 import CreatePost from './pages/CreatePost/CreatePost'
+import Search from './pages/Search/Search'
 
 // Components
 import Navbar from './components/Navbar/Navbar'
@@ -51,6 +52,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/About' element={<About />} />
+            <Route path='/search' element={<Search />} />
             <Route path='/Login' element={!user ? <Login /> : <Navigate to='/' />} />
             <Route path='/Register' element={!user ? <Register /> : <Navigate to='/' />} />
             <Route path='/Dashboard' element={user ? <Dashboard /> : <Navigate to='/Login' />} />
