@@ -14,6 +14,8 @@ const Search = () => {
 
   const {documents: posts} = useFetchDocuments("posts", search)
 
+  console.log("Buscando com search:", search)
+
 
   return (
     <div>

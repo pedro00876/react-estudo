@@ -29,7 +29,6 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
       try {
         let q;
 
-        //busca
         if (search) {
           q = await query(
             collectionRef,
