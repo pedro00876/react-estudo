@@ -6,7 +6,7 @@
    
   p {
     color: #aaa;
-    margin-top: 2em;
+    margin-top: 0.8em;
     margin-bottom: 2em;
   }
 
@@ -15,5 +15,6 @@
     margin-top: 15px;
     padding: 10px 15px;
   }
+
 }
 
