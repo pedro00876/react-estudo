@@ -8,11 +8,11 @@ import { useAuthValue } from '../../context/AuthContext'
 import { useFetchDocuments } from '../../hooks/useFetchDocuments'
 
 const Dashboard = () => {
-  const {user} = useAuthValue()
+  const { user } = useAuthValue()
   const uid = user.uid
 
-  // posts do usuario
-  const posts = []
+  
+  const  {documents: posts, loading } = useFetchDocuments("posts", null, uid)
 
 
 
@@ -32,6 +32,10 @@ const Dashboard = () => {
           <p>tem posts!</p>
         </div>
       )}
+
+      {posts && posts.map((posts) => (
+        <h3>{posts.title}</h3>
+      ))}
     </div>
   )
 }
