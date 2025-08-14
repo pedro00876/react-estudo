@@ -40,6 +40,8 @@ function App() {
     return <p>Carregando...</p>
   }
 
+  // aaa
+
   return (
     <div className='App'>
       <AuthProvider value={{ user }}>
