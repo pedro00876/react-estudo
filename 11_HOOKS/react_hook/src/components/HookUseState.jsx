@@ -7,8 +7,8 @@ const HookUseState = () => {
   const [name, setName] = useState('Matheus')
 
   const changerNames = () => {
-    userName = 'Pedro Elias'
-    setName('Matheus Chagas')
+    userName = 'Pedro Eliass'
+    setName('Matheus Chagass')
   }
 
   return (
