@@ -48,7 +48,7 @@ const HookUseReducer = () => {
     <div>
         <h2>UseReducer</h2>
         <p>Número: {number}</p>     
-        <button onClick={Dispatch}>Alterar número</button>
+        <button onClick={dispatch}>Alterar número</button>
 
         <h3>Tarefas:</h3>
         <form onSubmit={handleSubmit}>
