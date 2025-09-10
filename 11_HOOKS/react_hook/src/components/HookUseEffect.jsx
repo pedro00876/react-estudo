@@ -4,17 +4,22 @@ const HookUseEffect = () => {
     // 1 - useEffect, sem dependencias
     useEffect(() => {
       console.log("Estou sendo executado")
-    
-      return () => {
-        second
-      }
-    }, [third])
+    })
 
     const [number, setNumber] = useState(1)
 
     const changeSomething = () => {
         setNumber(number + 1)
     }
+
+
+
+    // 2 - Array de dependência vazio
+    useEffect(() => {
+      
+        console.log("Serei executado apenas uma vez")
+
+    }, [third])
     
   return (
     <div>
