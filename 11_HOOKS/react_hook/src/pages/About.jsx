@@ -3,8 +3,7 @@ import { useContext } from 'react'
 import { SomeContext } from '../components/HookUseContext'
 
 const About = () => {
-  const {contextValue} = useContext(SomeContext)
-
+  const { contextValue } = useContext(SomeContext)
 
   return (
     <div>
@@ -15,3 +14,4 @@ const About = () => {
 }
 
 export default About
+// aaaa
